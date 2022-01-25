@@ -4,12 +4,16 @@ import {
   fetchPinballThen,
   fetchGhibliAsync,
   fetchGhibliThen,
+  fetchDogAsync,
+  fetchDogThen,
 } from './services/promise-me';
 
 export default function App() {
   useEffect(async () => {
-    const resp = await fetchGhibliThen();
-    console.log('resp', resp);
+    const async = await fetchDogAsync();
+    console.log('async', async);
+    const then = await fetchDogThen();
+    console.log('then', then);
   }, []);
 
   return <h1>Hello World</h1>;

@@ -34,3 +34,17 @@ export const fetchGhibliThen = () => {
 
   return data;
 };
+
+export const fetchDogAsync = async () => {
+  const resp = await fetch('https://dog.ceo/api/breeds/image/random');
+  const data = await resp.json();
+
+  return data;
+};
+
+export const fetchDogThen = () => {
+  const data = fetch('https://dog.ceo/api/breeds/image/random').then((data) =>
+    data.json()
+  );
+  return data;
+};
