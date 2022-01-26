@@ -6,13 +6,15 @@ import {
   fetchGhibliThen,
   fetchDogAsync,
   fetchDogThen,
+  fetchFoodAsync,
+  fetchFoodThen,
 } from './services/promise-me';
 
 export default function App() {
   useEffect(async () => {
-    const async = await fetchDogAsync();
+    const async = await fetchFoodAsync();
     console.log('async', async);
-    const then = await fetchDogThen();
+    const then = await fetchFoodThen();
     console.log('then', then);
   }, []);
 
