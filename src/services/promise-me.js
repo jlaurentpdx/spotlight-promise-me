@@ -3,14 +3,14 @@
  * TODO: Write 5 fetch requests using async/await
  */
 
-export const fetchPinballAsync = async () => {
+export const pinballAsync = async () => {
   const resp = await fetch('https://ponball.herokuapp.com/api/v1/machines');
   const data = await resp.json();
 
   return data;
 };
 
-export const fetchPinballThen = () => {
+export const pinballThen = () => {
   const data = fetch('https://ponball.herokuapp.com/api/v1/machines').then(
     (data) => data.json()
   );
@@ -18,7 +18,7 @@ export const fetchPinballThen = () => {
   return data;
 };
 
-export const fetchGhibliAsync = async () => {
+export const ghibliAsync = async () => {
   const resp = await fetch(
     'https://ghibliapi.herokuapp.com/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49'
   );
@@ -27,7 +27,7 @@ export const fetchGhibliAsync = async () => {
   return data;
 };
 
-export const fetchGhibliThen = () => {
+export const ghibliThen = () => {
   const data = fetch(
     'https://ghibliapi.herokuapp.com/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49'
   ).then((data) => data.json());
@@ -35,30 +35,44 @@ export const fetchGhibliThen = () => {
   return data;
 };
 
-export const fetchDogAsync = async () => {
+export const dogAsync = async () => {
   const resp = await fetch('https://dog.ceo/api/breeds/image/random');
   const data = await resp.json();
 
   return data;
 };
 
-export const fetchDogThen = () => {
+export const dogThen = () => {
   const data = fetch('https://dog.ceo/api/breeds/image/random').then((data) =>
     data.json()
   );
   return data;
 };
 
-export const fetchFoodAsync = async () => {
+export const foodAsync = async () => {
   const resp = await fetch('https://foodish-api.herokuapp.com/api/');
   const data = await resp.json();
 
   return data;
 };
 
-export const fetchFoodThen = () => {
+export const foodThen = () => {
   const data = fetch('https://foodish-api.herokuapp.com/api/').then((data) =>
     data.json()
+  );
+  return data;
+};
+
+export const amiiboAsync = async () => {
+  const resp = await fetch('https://www.amiiboapi.com/api/amiibo/?name=kirby');
+  const data = await resp.json();
+
+  return data;
+};
+
+export const amiiboThen = () => {
+  const data = fetch('https://www.amiiboapi.com/api/amiibo/?name=kirby').then(
+    (data) => data.json()
   );
   return data;
 };
